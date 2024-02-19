@@ -4,7 +4,7 @@ func _input(event):
 	if event is InputEventKey and event.keycode == KEY_ESCAPE:
 		get_tree().quit()
 
-func _on_gate_player_entered_gate(body: Node2D):
+func _on_gate_player_entered_gate(_body: Node2D):
 	pass # Replace with function body.
 
 var laser_scene: PackedScene = preload("res://scenes/projectiles/laser.tscn")
