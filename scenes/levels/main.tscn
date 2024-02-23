@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bwai8lhnxahtg"]
+[gd_scene load_steps=17 format=3 uid="uid://bwai8lhnxahtg"]
 
 [ext_resource type="Script" path="res://scenes/levels/main.gd" id="1_o88x4"]
 [ext_resource type="Texture2D" uid="uid://chf1e4cqypd6h" path="res://graphics/ground/stones.png" id="2_0d54s"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cet23lidww3lp" path="res://graphics/decals/moss/moss_5.png" id="8_lks2c"]
 [ext_resource type="Texture2D" uid="uid://kk132lvn31mb" path="res://graphics/tilesets/outside_walls.png" id="9_q0sf1"]
 [ext_resource type="Texture2D" uid="uid://tih3nwbyr4hl" path="res://graphics/tilesets/soil.png" id="10_d3fy1"]
+[ext_resource type="PackedScene" uid="uid://cyy63nf06axkw" path="res://scenes/houses/house.tscn" id="13_i0mh6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rsrrc"]
 resource_name = "Walls"
@@ -94,8 +95,13 @@ layer_1/tile_data = PackedInt32Array(131072, 0, 0, 131073, 65536, 0, 131074, 655
 
 [node name="Gate" parent="." instance=ExtResource("2_r655b")]
 
+[node name="House" parent="." instance=ExtResource("13_i0mh6")]
+position = Vector2(4106, 1329)
+rotation = 1.5708
+
 [node name="Player" parent="." instance=ExtResource("2_l3ga2")]
 position = Vector2(571, 521)
+SPEED = 1500.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(0.5, 0.5)

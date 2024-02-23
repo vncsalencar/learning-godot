@@ -5,6 +5,7 @@ func _input(event):
 		get_tree().quit()
 
 func _on_gate_player_entered_gate(_body: Node2D):
+	print(_body)
 	pass # Replace with function body.
 
 var laser_scene: PackedScene = preload("res://scenes/projectiles/laser.tscn")

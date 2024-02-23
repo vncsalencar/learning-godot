@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 500.0
+@export var SPEED = 500.0
 
 var can_laser: bool = true
 var can_grenade: bool = true
